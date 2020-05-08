@@ -1,0 +1,14 @@
+{
+    "extends": [
+      "prettier"
+    ],
+    "rules": {
+      "js-quotes": [
+        1,
+        "prefer-double"
+      ]
+    },
+    "plugins": [
+      "prettier"
+    ]
+  }

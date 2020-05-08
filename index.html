@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='styles.css'>
+    <script src="https://kit.fontawesome.com/585fb02923.js" crossorigin="anonymous" defer></script>
+    <script src='script.js' defer></script>
+    <title>Document</title>
+</head>
+<body>
+  <div id="mainContainer">
+    <header><h4>MSI 2020</h4><br></header>
+    <h2>Hey!</h2>
+    <h3>Let's try to find a joke for you:</h3>
+
+    <form action="/action_page.php">
+        <input type="radio" name="option" value="random" id='random' class="radio">
+        <label for="random">Random</label><br>
+
+        <input type="radio" name="option" value="categories" id="fromCategories" class="radio">
+        <label for="categories">From categories</label><br>
+
+        <div id='categories' class="categories">
+            <a href="#" class="category">ANIMAL</a>
+            <a href="#" class="category">CAREER</a>
+            <a href="#" class="category">CELEBRITY</a>
+            <a href="#" class="category">DEV</a>
+        </div> 
+
+        <div>
+        <input type="radio" name="option" value="search" id="search" class="radio">
+        <label for="search">Search</label><br>
+        <input id="searchBox" class="searchBox" type="text" name="text" placeholder="Free text search"><br><br>
+
+        <button class="get-a-joke">Get a joke</button>   
+        </div>
+        
+  </form>
+      
+  <div id="jokeContainer">
+      <div class="joke" id="joke">
+        <div class="backgroundIcon">
+          <img src="img/message.svg" alt="" class="icon">
+          <div class="line"></div>
+        </div>
+        <div class="text-wrapper">
+          <p class="link">ID: <a href="https://api.chucknorris.io/jokes/FJ0xpElUT5G6XCMqb79KPw">FJ0xpElUT5G6XCMqb79KPw</a></p>
+          <p class="text">The band Disturbed used to be called I'm Fine until they saw Chuck Norris.</p>
+          <div class="container">
+            <i onclick="toggle()" id="favouriteButtonn">
+              <svg width="20" height="17" viewBox="0 0 20 17"  xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.99996 3.96069L9.20265 2.90732C8.88154 2.48309 8.52312 2.12729 8.13517 1.84067L8.13512 1.84063C7.37611 1.27978 6.52701 1 5.58701 1C4.303 1 3.1455 1.48826 2.30612 2.358L9.99996 3.96069ZM9.99996 3.96069L10.7973 2.90737M9.99996 3.96069L10.7973 2.90737M10.7973 2.90737C11.1186 2.48298 11.4768 2.12731 11.8647 1.84068L10.7973 2.90737ZM7.58053 14.0752L7.58058 14.0753L7.58375 14.0779C8.27052 14.6371 9.05389 15.275 9.86792 15.955L9.8686 15.9555C9.89855 15.9806 9.94461 16 10 16C10.0555 16 10.1017 15.9804 10.1312 15.9558L10.1317 15.9553C10.9397 15.2803 11.7179 14.6465 12.4012 14.0901L12.4198 14.0749L12.4199 14.0748C14.458 12.4156 16.1197 11.0584 17.2611 9.74256L17.2611 9.74251C18.5017 8.3125 19 7.05701 19 5.74238C19 4.41281 18.5244 3.2189 17.6938 2.35805C16.8544 1.48826 15.697 1 14.413 1C13.4731 1 12.624 1.27974 11.8648 1.84057L7.58053 14.0752ZM7.58053 14.0752C5.54226 12.4157 3.88042 11.0584 2.73905 9.74269C1.49845 8.31245 1 7.05694 1 5.74252C1 4.41284 1.47553 3.21894 2.30603 2.35809L7.58053 14.0752Z" fill="#FF6767" stroke="#FF6767" stroke-width="2"/>
+              </svg>
+              <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 17C9.71527 17 9.44077 16.9015 9.22684 16.7224C8.41888 16.0475 7.63992 15.4132 6.95267 14.8536L6.94916 14.8507C4.93423 13.2102 3.19427 11.7935 1.98364 10.3979C0.630341 8.83778 0 7.35852 0 5.74252C0 4.17244 0.563507 2.72395 1.58661 1.66367C2.62192 0.590857 4.04251 0 5.58716 0C6.74164 0 7.79892 0.348712 8.72955 1.03637C9.19922 1.38348 9.62494 1.80829 10 2.3038C10.3752 1.80829 10.8008 1.38348 11.2706 1.03637C12.2012 0.348712 13.2585 0 14.413 0C15.9575 0 17.3782 0.590857 18.4135 1.66367C19.4366 2.72395 20 4.17244 20 5.74252C20 7.35852 19.3698 8.83778 18.0165 10.3978C16.8059 11.7935 15.0661 13.2101 13.0515 14.8504C12.363 15.4108 11.5828 16.0461 10.773 16.7227C10.5592 16.9015 10.2846 17 10 17ZM5.58716 1.11932C4.37363 1.11932 3.25882 1.58203 2.44781 2.42232C1.62476 3.2753 1.17142 4.45439 1.17142 5.74252C1.17142 7.10165 1.70013 8.31719 2.88559 9.68375C4.03137 11.0047 5.73563 12.3923 7.70889 13.9989L7.71255 14.0018C8.4024 14.5635 9.18442 15.2003 9.99832 15.8802C10.8171 15.199 11.6003 14.5612 12.2916 13.9986C14.2647 12.392 15.9688 11.0047 17.1146 9.68375C18.2999 8.31719 18.8286 7.10165 18.8286 5.74252C18.8286 4.45439 18.3752 3.2753 17.5522 2.42232C16.7413 1.58203 15.6264 1.11932 14.413 1.11932C13.524 1.11932 12.7078 1.38931 11.9872 1.92171C11.3449 2.39637 10.8975 2.99642 10.6352 3.41627C10.5003 3.63217 10.2629 3.76105 10 3.76105C9.73709 3.76105 9.49966 3.63217 9.36478 3.41627C9.10263 2.99642 8.65524 2.39637 8.01285 1.92171C7.29218 1.38931 6.47598 1.11932 5.58716 1.11932Z" fill="#FF6767"/>
+              </svg>
+                
+            </i>
+          </div>
+        </div>
+      </div>
+
+    <div class="joke" id="joke">
+      <div class="backgroundIcon">
+        <img src="img/message.svg" alt="" class="icon">
+        <div class="line"></div>
+      </div>
+        <div class="text-wrapper">
+          <p class="link">ID: <a href="https://api.chucknorris.io/jokes/J0-WGKJ2RcWNXR-JCt8gvw">J0-WGKJ2RcWNXR-JCt8gvw</a></p>
+          <p class="text">Chuck Norris will find you and he will kill you gatlin.</p>
+        </div>
+        <button class="favouriteButton" id="favouriteButton"><img src="img/favouriteButton.svg" alt=""></button>
+      </div>
+
+      <div class="joke" id="joke">
+        <div class="backgroundIcon">
+        <img src="img/message.svg" alt="" class="icon">
+        <div class="line"></div>
+        </div>
+        <div class="text-wrapper">
+          <p class="link">ID: <a href="https://api.chucknorris.io/jokes/anpVQt27SMOyPEPLcR4qTQ">anpVQt27SMOyPEPLcR4qTQ</a></p>
+          <p class="text">Chuck Norris can kill you in your sleep even if you're wide awake.</p>
+        </div>
+        <button class="favouriteButton" id="favouriteButton"><img src="img/favouriteButton.svg" alt=""></button>
+      </div>
+
+      <div class="joke" id="joke">
+        <div class="backgroundIcon">
+        <img src="img/message.svg" alt="" class="icon">
+        <div class="line"></div>
+      </div>
+        <div class="text-wrapper">
+          <p class="link">ID: <a href="https://api.chucknorris.io/jokes/9kmZLclWRWWTdUvMoNegSQ">9kmZLclWRWWTdUvMoNegSQ</a></p>
+          <p class="text">Neo is The One, the one after Chuck Norris.</p>
+        </div>
+        <button class="favouriteButton" id="favouriteButton"><img src="img/favouriteButton.svg" alt=""></button>
+      </div>
+
+      <div class="joke" id="joke">
+        <div class="backgroundIcon">
+        <img src="img/message.svg" alt="" class="icon">
+        <div class="line"></div>
+      </div>
+        <div class="text-wrapper">
+          <p class="link">ID: <a href="https://api.chucknorris.io/jokes/H-uRrPnWSoOJ-0hItqL2cw">H-uRrPnWSoOJ-0hItqL2cw</a></p>
+          <p class="text">Any man can make yellow snow. Chuck Norris can make brown snow.</p>
+        </div>
+        <button class="favouriteButton" id="favouriteButton"><img src="img/favouriteButton.svg" alt=""></button>
+      </div>
+      
+      <div class="joke" id="joke">
+        <div class="backgroundIcon">
+        <img src="img/message.svg" alt="" class="icon">
+        <div class="line"></div>
+      </div>
+        <div class="text-wrapper">
+          <p class="link">ID: <a href="https://api.chucknorris.io/jokes/sMXOIicpQgymz-6MXookyg">sMXOIicpQgymz-6MXookyg</a></p>
+          <p class="text">when enimem preforemed "im not afaid" live ,Chuck Norris was in the crowed, enimem saw him, he was sent to a hospital for kidney failure , he got a spare from chuck , and in the hospital he began writing "no love"</p>
+        </div>
+        <button class="favouriteButton" id="favouriteButton"><img src="img/favouriteButton.svg" alt=""></button>
+      </div>
+  </div>
+</div>
+<div class="sidebar">
+<header>Favourite</header>
+</div>
+
+
+    </div>
+      
+</body>
+</html>
