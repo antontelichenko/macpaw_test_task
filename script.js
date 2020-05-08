@@ -16,6 +16,7 @@ random.onclick = function() {
   document.getElementById('searchBox').hidden = true;
 };
 console.log('test');
+console.log('test');
 fromCategories.onclick = function() {
   document.getElementById('categories').hidden = false;
   document.getElementById('searchBox').hidden = true;
