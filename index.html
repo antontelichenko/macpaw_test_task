@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link type="text/css"  rel='stylesheet' href='css/styles.css'>
-    <link rel="stylesheet" href="css/animation.css" />
-    <title>Document</title>
-</head>
-<body>
-  <div class="burger-wrapper" onclick='openFavouriteJokes(true)'>
-    <svg width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="14" fill="#333"/><rect x="7" y="16" width="14" height="2" rx="1" fill="#fff"/><rect x="7" y="10" width="14" height="2" rx="1" fill="#fff"/></svg>
-    <p>Favourite</p>
-</div>
-  <div id="mainContainer">
-    <header>MSI 2020<br></header>
-    <p class='upper-text'>Hey!</p>
-    <h3>Let's try to find a joke for you:</h3>
-    <label class="container">Random
-      <input onclick="toggleRadio('random')" type="radio" name="radiof"  checked="checked">
-      <span class="checkmark"></span>
-    </label>
-    <label class="container">From categories
-      <input onclick="toggleRadio('category')" type="radio" name="radiof">
-      <span class="checkmark"></span>
-    </label>
-    <div id='categories' class="categories"></div>
-    <label class="container">Search
-      <input onclick="toggleRadio('search')" type="radio" name="radiof">
-      <span class="checkmark"></span>
-    </label>
-    <input id="searchBox" class="searchBox" type="text" name="text" placeholder="Free text search"  onchange="saveSearchValue(this.value)"><br><br>
-    <button class="get-a-joke" onclick="searchJoke()">Get a joke</button>
-    <div id="jokeContainer"></div>
-  </div>
-  <div class="overlay"></div>
-  <div class="sidebar">
-    <header id='favorite-jokes-wrapper'><span>Favourite</span></header>
-  <div class="burger-wrapper in-favourites" onclick='openFavouriteJokes(false)'>
-    <svg width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="14" fill="#333"/><rect width="14.849" height="2.121" rx="1.061" transform="rotate(-45 26.331 -.407)" fill="#fff"/><rect width="14.849" height="2.121" rx="1.061" transform="rotate(45 -4.907 15.467)" fill="#fff"/></svg><p>Favourite</p>
-</div>
-    <div class="favorite-jokes-container"></div>
-  </div>
-</body>
-    <script src='script.js'></script>
-    </html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link type="text/css"  rel='stylesheet' href='css/styles.css'>
+      <link rel="stylesheet" href="css/animation.css" />
+      <title>Document</title>
+  </head>
+  <body>
+    <div class="burger-wrapper" onclick='openFavouriteJokes(true)'>
+      <svg width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="14" fill="#333"/><rect x="7" y="16" width="14" height="2" rx="1" fill="#fff"/><rect x="7" y="10" width="14" height="2" rx="1" fill="#fff"/></svg>
+      <p>Favourite</p>
+    </div>
+    <div id="mainContainer">
+      <header>MSI 2020<br></header>
+      <p class='upper-text'>Hey!</p>
+      <h3>Let's try to find a joke for you:</h3>
+      <label class="container">Random
+        <input onclick="toggleRadio('random')" type="radio" name="radiof"  checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">From categories
+        <input onclick="toggleRadio('category')" type="radio" name="radiof">
+        <span class="checkmark"></span>
+      </label>
+      <div id='categories' class="categories"></div>
+      <label class="container">Search
+        <input onclick="toggleRadio('search')" type="radio" name="radiof">
+        <span class="checkmark"></span>
+      </label>
+      <input id="searchBox" class="searchBox" type="text" name="text" placeholder="Free text search"  onchange="saveSearchValue(this.value)"><br><br>
+      <button class="get-a-joke" onclick="searchJoke()">Get a joke</button>
+      <div id="jokeContainer"></div>
+    </div>
+    <div class="overlay"></div>
+    <div class="sidebar">
+      <header id='favorite-jokes-wrapper'><span>Favourite</span></header>
+    <div class="burger-wrapper in-favourites" onclick='openFavouriteJokes(false)'>
+      <svg width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="14" fill="#333"/><rect width="14.849" height="2.121" rx="1.061" transform="rotate(-45 26.331 -.407)" fill="#fff"/><rect width="14.849" height="2.121" rx="1.061" transform="rotate(45 -4.907 15.467)" fill="#fff"/></svg><p>Favourite</p>
+    </div>
+      <div class="favorite-jokes-container"></div>
+    </div>
+  </body>
+<script src='script.js'></script>
+</html>

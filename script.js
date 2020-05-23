@@ -172,7 +172,7 @@ async function toggleRadio(e) {
 
 async function searchJoke() {
   if (radioValue === 'random') {
-    const response = await fetch('https://api.chucknorris.io/jokes/random'); // запрос к api (сходи на https://api.chucknorris.io/) возьми (GET) там по адресу jokes/random случайную шутку
+    const response = await fetch('https://api.chucknorris.io/jokes/random');
     const json = await response.json();
     joke = json.error ? json.violations : json;
   } else if (radioValue === 'category') {
