@@ -416,7 +416,7 @@ font-family: RobotoMedium;
 
   @media (max-width: 1440px) {
       .sidebar{
-          min-width: 400px;
+          min-width: 380px;
       }
   }
   @media (max-width: 834px) {
