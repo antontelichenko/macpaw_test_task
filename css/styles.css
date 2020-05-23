@@ -1,0 +1,526 @@
+@font-face {
+    font-family: RobotoRegular;
+    src: url(../font/Roboto-Regular.ttf); 
+   }
+   @font-face {
+    font-family: RobotoMedium;
+    src: url(../font/Roboto-Medium.ttf); 
+   }
+   @font-face {
+    font-family: RobotoBold; 
+    src: url(../font/Roboto-Bold.ttf);
+   }
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-left: 140px;
+    justify-content: space-between;
+    max-width: 1440px;
+    height: 100%;
+}
+
+.upper-text {
+    width: 100px;
+    height: 44px;
+    left: 140px;
+    top: 146px;
+    font-family: RobotoMedium;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    color: #333333;
+}
+
+header {
+    margin-top: 40px;
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: #333333;
+}
+
+h3 {
+    width: 315px;
+    height: 44px;
+    left: 140px;
+    top: 190px;
+    font-family: RobotoMedium;
+    font-size: 24px;
+    line-height: 44px;
+    color: #333333;
+}
+
+.categories {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 600px;
+    max-height:200px;
+}
+
+.category {
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ABABAB;
+    border: 2px solid #F8F8F8;
+    box-sizing: border-box;
+    margin: 3px;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.selected-category {
+    background-color: #E5E4E4;
+}
+
+.category:hover {
+    background-color: #E5E4E4;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+.searchBox {
+    margin-top: 17px;
+    padding: 10px;
+    max-width: 680px;
+    height: 42px;
+    left: 140px;
+    top: 395px;
+    border: 2px solid #333333;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.get-a-joke {
+    width: 152px;
+    height: 42px;
+    left: 140px;
+    top: 453px;
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 137%;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: linear-gradient(92.01deg, #8EA7FF 0%, #7291FF 100%);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+}
+
+.mainContainer {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #F8F8F8;
+    max-width: 480px;
+    padding: 0 40px;
+    display: flex;
+    min-height: 100%;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.favorite-jokes-container {
+    max-width: 400px;
+}
+
+.sidebar header{
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    align-self: flex-start;
+    color: #ABABAB;
+    margin: 40px 0 20px 0;
+}
+
+.joke {
+    display: flex;
+    flex-direction:row;
+    background-color: #f8f8f8;
+    width: 100%;
+    min-height: 225px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+
+.favorite-joke {
+    display: flex;
+    flex-direction:row;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    min-height: 140px;
+}
+.text-wrapper {
+    flex-direction: column;
+    width: 540px;
+    margin: 40px 40px 0 20px;
+}
+
+.favorite-text-wrapper {
+    flex-direction: column;
+    width: 300px;
+    margin: 20px 20px 0  20px;
+}
+
+.text-wrapper .joke-text {
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 5px;
+    max-width: 540px;
+}
+
+.link {
+    color: #7A7A7A;
+    font-family: RobotoMedium;
+    font-weight: 500;
+    align-self: flex-start;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.link a {
+    text-decoration: underline;
+}
+
+.background-icon {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    margin: 67px 0 0 40px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.favorite-background-icon {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    margin: 47px 0 0 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.buttonText {
+    right: 9.7%;
+    top: 4%;
+    position: fixed;
+    color: grey;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+.favoriteButton {
+    justify-content: flex-end;
+    left: 90%;
+    bottom: 72%;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    height: 10%;
+    cursor: pointer;
+}
+.text-wrapper .end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.favorite-text-wrapper .end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.like-wrapper {
+    color: #FF6767;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.fas {
+    color: #FF6767;
+}
+
+.joke-footer {
+    margin: 28px 0 45px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.joke-footer p {
+    margin: 0;
+    font-family: RobotoRegular;
+}
+.joke-footer .joke-category {
+letter-spacing: 2px;
+text-transform: uppercase;
+font-family: RobotoMedium;
+}
+/* //////////////////////////////////////////////////////// radiobutton */
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-family: RobotoRegular;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 2px solid #ABABAB;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #e5e5e5;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+  }
+ 
+  @font-face {
+    font-family: "fonticons";
+    src: url("../font/fonticons.eot?27052644#iefix")
+        format("embedded-opentype"),
+      url("../font/fonticons.woff?27052644") format("woff");
+      }
+  .demo-icon
+  {
+    font-family: "fonticons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.burger-wrapper {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    padding: 40px 40px 0 0;
+    right: 0;
+}
+  .burger-wrapper p {
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #ababab;
+  }
+
+.overlay {
+    display: none;
+    position: fixed;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background: black;
+    opacity: .3;
+    }
+  /* //////////////////// media query */
+
+  @media (max-width: 834px) {
+    .sidebar {
+        max-width: 488px;
+        position: absolute;
+        right: 0;
+        display: none;
+        align-items: flex-start;
+    }
+    .sidebar header span {
+        display: none;
+    }
+     .sidebar header  {
+         margin-bottom: 48px;
+    }
+    .burger-wrapper {
+        display: flex;
+    }
+    .header{
+        margin-top: 40px;
+    }
+    .mainContainer {
+        justify-content: flex-end;
+    }
+    body {
+        margin-left: 40px;
+    }
+
+    #jokeContainer{
+        min-width: 754px;
+    }
+
+    .text-wrapper {
+        width: 614px;
+    }
+} 
+ @media (max-width: 380px) {
+    .sidebar {
+        max-width: 380px;
+        display: none;
+        padding-left: 20px;
+    }
+    .sidebar header span {
+        display: none;
+    }
+     .sidebar header  {
+         margin-bottom: 48px;
+    }
+    .burger-wrapper {
+        display: flex;
+        padding: 20px 20px 0 0;
+    }
+    header{
+        margin-top: 20px;
+        max-width: 360px;
+    }
+    .mainContainer {
+        justify-content: flex-end;
+    }
+    body {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        margin-left: 20px;
+        justify-content: flex-start;
+        max-width: 380px;
+        height: 100%;
+    }
+
+    #jokeContainer{
+        min-width: 340px;
+    }
+
+    .text-wrapper {
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 240px;
+    }
+    #mainContainer {
+        max-width: 340px;
+    }
+
+    .background-icon {
+        margin: 47px 0 0 20px;
+    }
+
+    .favorite-joke {
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .favorite-text-wrapper {
+        margin-top: 20px;
+        width: 240px;
+    }
+
+    .favorite-background-icon {
+        margin: 47px 0 0 20px;
+    }
+    .favorite-jokes-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .joke-footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
