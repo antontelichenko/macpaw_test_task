@@ -414,6 +414,11 @@ font-family: RobotoMedium;
     }
   /* //////////////////// media query */
 
+  @media (max-width: 1440px) {
+      .sidebar{
+          min-width: 400px;
+      }
+  }
   @media (max-width: 834px) {
     .sidebar {
         max-width: 488px;
